@@ -80,7 +80,7 @@ export default function Navbar() {
                   <Link href="/transactions">Transactions</Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => {}}>Disconnect</DropdownMenuItem>
+                <DropdownMenuItem onClick={"disconnectWallet"}>Disconnect</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
