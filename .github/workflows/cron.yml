@@ -1,0 +1,14 @@
+name: Transaction Monitor
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Chạy vào lúc 00:00 mỗi Chủ nhật
+
+jobs:
+  check-transactions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger cron
+        run: |
+          curl -X POST \
+            -H "x-cron-secret: ${{ secrets.CRON_SECRET}}" \
+            https://domain.com/api/cron
